@@ -1,6 +1,6 @@
 # TODO: Update with exact module version
-numpy
-torch>=1.7
+numpy==1.23.5   # newer or older does not work well.
+# torch>=1.7    suggest to install pytorch manually.
 opencv_python
 loguru
 scikit-image

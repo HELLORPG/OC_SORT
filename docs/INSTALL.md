@@ -4,16 +4,22 @@ OC-SORT is built upon codebase of [YOLOX](https://github.com/Megvii-BaseDetectio
 ### 1. Installing on the host machine
 Step1. Install OC-SORT
 ```shell
-git clone https://github.com/noahcao/OC_SORT.git
+git clone https://github.com/HELLORPG/OC_SORT.git
 cd OC_SORT
+# you should already in the python env.
+# for me, I use `conda create -n OC-SORT python=3.8; conda activate OC-SORT;`
+# firstly, install a suitable version of pytorch.
+# for me, I use `conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia`
 pip3 install -r requirements.txt
+pip3 install numpy==1.23.5  # hack implementation
 python3 setup.py develop
 ```
 
 Step2. Install [pycocotools](https://github.com/cocodataset/cocoapi).
 
 ```shell
-pip3 install cython; pip3 install 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
+# pip3 install cython; pip3 install 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
+pip3 install cython pycocotools
 ```
 
 Step3. Others
