@@ -74,6 +74,11 @@ Download the COCO-pretrained YOLOX weight [here](https://github.com/Megvii-BaseD
     python3 tools/train.py -f exps/example/dancetrack/yolox_x.py -d 8 -b 48 --fp16 -o -c pretrained/yolox_x.pth
     ```
 
+* **Train on SportsMOT train set**
+    ```shell
+    python3 tools/train.py -f exps/example/sportsmot/yolox_x.py -d 8 -b 48 --fp16 -o -c pretrained/yolox_x.pth
+    ```
+
 * **Train custom dataset**
 
     First, you need to prepare your dataset in COCO format. You can refer to [MOT-to-COCO](https://github.com/ifzhang/ByteTrack/blob/main/tools/convert_mot17_to_coco.py) or [CrowdHuman-to-COCO](https://github.com/ifzhang/ByteTrack/blob/main/tools/convert_crowdhuman_to_coco.py). Then, you need to create a Exp file for your dataset. You can refer to the [CrowdHuman](https://github.com/ifzhang/ByteTrack/blob/main/exps/example/mot/yolox_x_ch.py) training Exp file. Don't forget to modify get_data_loader() and get_eval_loader in your Exp file. Finally, you can train bytetrack on your dataset by running:
